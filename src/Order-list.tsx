@@ -4,14 +4,14 @@ interface OrderListProps {
     name: string;
     order: number;
     delete: React.MouseEventHandler;
+    price: number
 }
 
 const OrderList: React.FC<OrderListProps> = (props) => {
     return (
         <div>
-            <p>{props.name}</p>
-            <span>{props.order}</span>
-            <button onClick={props.delete}></button>
+            <p>{props.name} x{props.order} {props.price} сом</p>
+            <button onClick={props.delete}>X</button>
         </div>
     );
 };
